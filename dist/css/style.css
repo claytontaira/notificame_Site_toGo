@@ -596,7 +596,7 @@ a:focus {
   width: 100px;
   height: 100px;
   position: absolute!important;
-  top: 50%;
+  top: 0%;
   left: 50%;
   margin-top: -50px;
   margin-left: -50px; 

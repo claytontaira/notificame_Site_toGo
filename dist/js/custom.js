@@ -386,15 +386,15 @@
 					},
 					messages:{
 							name:{
-								required: "Please enter no more than (1) characters"
+								required: "Digite seu nome"
 							}, 
 							email:{
-								required: "We need your email address to contact you",
-								email: "Your email address must be in the format of name@domain.com"
+								required: "Precisamos do seu endereço de e-mail para entrar em contato com você",
+								email: "Seu endereço de email deve estar no formato seu_email@dominio.com"
 							}, 
 							phone:{
-								required: "Please enter only digits",
-								digits: "Please enter a valid number"
+								required: "Digite apenas dígitos",
+								digits: "Por favor insira um número válido"
 							}, 
 						}
 		});
@@ -426,18 +426,18 @@
 					},
 					messages:{
 							name:{
-								required: "Please enter no more than (1) characters"
+								required: "Digite seu nome"
 							}, 
 							email:{
-								required: "We need your email address to contact you",
-								email: "Your email address must be in the format of name@domain.com"
+								required: "Precisamos do seu endereço de e-mail para entrar em contato com você",
+								email: "Seu endereço de email deve estar no formato seu_email@dominio.com"
 							},
 							phone:{
-								required: "Please enter only digits",
-								digits: "Please enter a valid number"
+								required: "Digite apenas dígitos",
+								digits: "Por favor insira um número válido"
 							},  
 							message:{
-								required: "Please enter no more than (2) characters"
+								required: "Precisamos de mais informações na sua mensagem"
 							}, 
 						}
 		});
