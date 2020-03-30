@@ -15,7 +15,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		
 		<!-- SITE TITLE -->
-		<title>Notificame - Sistema de Mensagens Para Condôminos</title>
+		<title>Notificame - Sistema de Mensagens Para Condôminios</title>
 		
 		<!-- FAVICON AND TOUCH ICONS  -->
 		<!-- <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
@@ -45,7 +45,45 @@
 			<meta name="theme-color" content="#ffffff">
 			
 			
-			
+			<!-- INICIO ABRIR PERGUNTAS FREQUENTES -->
+			<script type="text/javascript" src="js/jquery.min.js.download"></script>
+
+
+			<script type="text/javascript">
+			  jQuery(function($) {
+				$( document ).ready(function() {
+					var urlParams = new URLSearchParams(window.location.search);
+
+					if (urlParams.has('cancelar')) {
+						document.getElementById('cat-04').scrollIntoView({behavior: 'instant', block: 'start',  inline: 'nearest'});
+						$('#cat-04-text').css('display','block');
+
+					}
+				});
+
+				$header = $(".navbar-default");
+				  $(document).on("scroll", function() {
+					var scrollToShowBackgroundMenu = $(".navbar-default").innerHeight();
+					var scrollToShowBackgroundMenu = 10;
+					if ($(window).scrollTop() > scrollToShowBackgroundMenu) {
+					  $header.addClass("menu-cor-hero");
+					} else {
+					  $header.removeClass("menu-cor-hero");
+					}
+				  });
+
+				$('.navbar-toggle').click(function(e) {
+					$header.toggleClass("menu-cor-hero");
+				});
+
+				// abas - abre e fecha
+				$('.js-faqopen dt').on('click', function(){
+					$(this).next('dd').slideToggle();
+				});
+
+			  });
+			</script>
+			<!-- END FECHAR PERGUNTAS FREQUENTES -->
 			
 			
 			<!-- GOOGLE FONTS -->
@@ -350,7 +388,7 @@
 																
 																<!-- Title -->
 																<!-- <h3 class="h3-xl">Manage all your personal finance</h3>	 -->
-																<h3 class="h3-xl">Síndico: Sua equipe pode trabalhar menos e produzir mais! Automatize 100% das suas Comunicação de rotina.</h3>	
+																<h3 class="h3-xl">Síndico: Sua equipe pode trabalhar menos e produzir mais! Automatize 100% das suas Comunicações de rotina.</h3>	
 																
 																<!-- Text -->
 																<p class="p-lg"><strong>Somos uma plataforma de envio de mensagens de notificações.</strong><br>
@@ -476,7 +514,7 @@
 																			
 																			<!-- Text -->
 																			<p class="p-md"><strong>Simplificamos ao Máximo!</strong><br><br>
-																			1) Cadastro Mínimo, apenas: Nome do Condomínio, CNPJ e E-mail.<br>
+																			1) Cadastro Mínimo: Nome do Condomínio, CNPJ e E-mail.<br>
 																			2) Um e-mail será enviado para confirmar sua inscrição e cadastrar uma senha.<br>
 																			3) Na plataforma, cadastre um grupo (Exemplo: Nome da torre ou bloco), se for torre única, coloque um nome (Grupo de Moradores).<br>
 																			4) Cadastre os moradores associando ao grupo criado.<br>
@@ -549,7 +587,7 @@
 																	<!-- Text -->
 																	<p class="p-md"><strong>Pensamos em várias estratégias para você!</strong><br><br>
 																	
-																	Com apenas um tablet ou celular com conexão com a internet você poderá realizar o aviso de rotina. E importante, o funcionário não precisará dos dados do morador, apenas o número do apartamento.
+																	Com um tablet ou celular com conexão com a internet você poderá realizar o aviso de rotina. E importante, o funcionário não precisará dos dados do morador, somente o número do apartamento.
 																	<br><br>
 																	1) <strong><u>Para correspondência</u></strong>: Imagina com a chegada de novas encomendas o porteiro ou mensageiro do seu prédio precisa ficar interfonando para o apartamento querendo encontrar o morador, deixando-o sobrecarregado e com o interfone ocupado.<br>
 																	2) <strong><u>Para avisos agendados</u></strong>: A plataforma permite que o condomínio agende o envio de mensagens programadas, seja ela sobre manutenção preventiva ou avisos em grupos.<br>
@@ -624,7 +662,7 @@
 																				<!-- Title -->
 																				<h5 class="h5-sm">Proteja seu cadastro:</h5>
 																				<!-- Text -->
-																				<p>Seu cadastro protegido dos funcionários e o Morador receberá mensagens apenas se autorizar.
+																				<p>Seu cadastro está protegido dos funcionários e o Morador receberá as mensagens, se autorizar.
 																				</p>
 																				
 																			</div>
@@ -1395,15 +1433,26 @@ BÔNUS INCRÍVEIS E SOB MEDIDA.
 																								<div class="col-lg-6">
 																									<div class="questions-holder">
 																										
-																										
 																										<!-- QUESTION #1 -->
 																										<div class="question" data-wow-delay="0.0s">
 																											
 																											<!-- Question -->
-																											<h5 class="h5-xs">Para quem é o notificame?</h5>
+																											<h5 class="h5-xs">Como funciona a avaliação gratuita por 30 dias?</h5>
 																											
 																											<!-- Answer -->
-																											<p>Para o Síndico que deseja automatizar a comunicação interna do Condomínio com os moradores, os funcionários, o conselho gestor, as empresas de manutenções, etc.	
+																											<p>Nós oferecemos <strong><u>30 dias gratuitos</strong></u> para você convidar sua equipe e <strong><u>testar todos os recursos</strong></u>.
+																											</p>
+																											
+																										</div>	
+
+																										<!-- QUESTION #1 -->
+																										<div class="question" data-wow-delay="0.0s">																										
+																											<!-- Question -->
+																											<h5 class="h5-xs">Preciso informar um cartão de crédito para o período de testes?</h5>
+																											
+																											<!-- Answer -->
+																											<p><u><strong>Não!</u></strong> Fique tranquilo, <u><strong>não é necessário cartão crédito</u></strong> e nós avisaremos quando o teste estiver terminando.<br>
+																											Finalizado, ou não, o período de teste, a assinatura pode ser feita diretamente pelo sistema e será somado o período de teste pelo plano contratado.
 																											</p>
 																											
 																										</div>	
@@ -1412,14 +1461,14 @@ BÔNUS INCRÍVEIS E SOB MEDIDA.
 																										<div class="question" data-wow-delay="0.0s">
 																											
 																											<!-- Question -->
-																											<h5 class="h5-xs">Preciso informar um cartão de crédito para o período de testes?</h5>
+																											<h5 class="h5-xs">Quais informações preciso para realizar o cadastro do condomínio?</h5>
 																											
 																											<!-- Answer -->
-																											<p><u><strong>Não!</strong></u> Apenas realizar um cadastro com <i>Nome, E-mail e Cnpj.</i> No final do período você optará por continuarmos conosco (<i>tenho certeza que sim</i>) ou apenas finalizará seu período de testes.
+																											<p>Cadastro mínimo com <u><strong>Nome, E-mail e Cnpj</u></strong>. Será enviado um e-mail para confirmar a inscrição, cadastrar senha e receber o link de acesso.
+																											Após o período de teste, pedimos que conclua o cadastro para conhecermos melhor nossos clientes.
 																											</p>
 																											
 																										</div>
-																										
 																										
 																										<!-- QUESTION #3 -->
 																										<div class="question" data-wow-delay="0.0s">
@@ -1429,11 +1478,13 @@ BÔNUS INCRÍVEIS E SOB MEDIDA.
 																											
 																											<!-- Answer -->
 																											<p><u><strong>Não!</strong></u> Temos uma tela de importação de cadastro, basta seguir o modelo padrão (<strong><u>clique aqui para baixar</strong></u>) e realizar a importação dos cadastros sem precisar cadastrar um a um. <br>
-																											<p><u><strong>Recomendamos</strong></u> apenas que importe por grupos, por exemplo: Moradores do Bloco A, pois no momento de importar os cadastros um grupo deverá ser informado. 
+																											<p><u><strong>Recomendamos</strong></u> que importe por grupos, por exemplo: Moradores do Bloco A, pois no momento de importar os cadastros um grupo deverá ser informado. 
 																											</p>									
 																											
 																										</div>	
 																										
+																										
+																			
 																										
 																										<!-- QUESTION #4 -->
 																										<div class="question" data-wow-delay="0.0s">
@@ -1470,11 +1521,13 @@ BÔNUS INCRÍVEIS E SOB MEDIDA.
 																											<h5 class="h5-xs">Por que não enviamos via WhatsApp?</h5>
 																											
 																											<!-- Answer -->
-																											<p>Seria uma ótima opção se não fossem os custos. Atualmente o WhattsApp liberou mensagens em massa apenas para empresas, com o custo em torno de R$0,50 por notificação (o que daria R$ 500,00 em 1 mil notificações só de custo), o que tornou viável apenas para canais de vendas. <br>
-																											O WhattsApp tradicional possui uma limitação de contatos e mensagens enviadas, mesmo que driblemos essa trava a qualquer momento podemos ser bloqueados.
+																											<p>Atualmente o WhatsApp liberou mensagens em massa para empresas, com o custo em torno de R$0,50 por notificação (o que daria R$ 500,00 em 1 mil notificações só de custo), o que o tornou viável apenas para canais de vendas. <br>
+																											O WhatsApp tradicional possui uma limitação de contatos e mensagens enviadas, o que inviabiliza sua implementação.
 																											</p>
 																											
 																										</div>
+																										
+																									
 																										
 																									</div>
 																								</div>	<!-- END QUESTIONS HOLDER -->
@@ -1529,10 +1582,10 @@ BÔNUS INCRÍVEIS E SOB MEDIDA.
 																										<div class="question" data-wow-delay="0.0s">
 																											
 																											<!-- Question -->
-																											<h5 class="h5-xs">Quais informações são necessárias para iniciar as comunicações?</h5>
+																											<h5 class="h5-xs">Quais informações são necessárias para iniciar o cadastro dos moradores?</h5>
 																											
 																											<!-- Answer -->
-																											<p>Simplificamos apenas para <i>Nome, E-mail e Apartamento</i>.<br>
+																											<p>Simplificamos para <i>Nome, E-mail e Apartamento</i>.<br>
 																											Caso queira enriquecer o cadastro (recomendamos): <i>Apelido (como gostaria que fosse chamado), Celular, Data de Nascimento e Sexo</i>.
 																											</p>
 																											
@@ -1549,6 +1602,33 @@ BÔNUS INCRÍVEIS E SOB MEDIDA.
 																											</p>
 																											
 																										</div>	
+																										
+																										<!-- QUESTION #6 -->
+																										<div class="question" data-wow-delay="0.0s">
+																											
+																											<!-- Question -->
+																											<h5 class="h5-xs">Quais são as formas de pagamento?</h5>
+																											
+																											<!-- Answer -->
+																											<p>Aceitamos boleto e diversos cartões de crédito. Sugerimos a assinatura no cartão de crédito, porque a conta é liberada instantaneamente com o pagamento. No boleto, pode levar até 3 dias úteis para que o pagamento seja compensado e a conta liberada.
+																											</p>
+																											
+																										</div>
+																										
+																										
+																										<!-- QUESTION #6 -->
+																										<div class="question" data-wow-delay="0.0s">
+																											
+																											<!-- Question -->
+																											<h5 class="h5-xs">Posso alterar de plano ou contratar um plano customizado?</h5>
+																											
+																											<!-- Answer -->
+																											<p><strong><u>Sim</strong></u>! Envie um e-mail para <strong><u>contato@notificame.com.br</strong></u> para entendermos sua necessidade. 
+																											</p>
+																											
+																										</div>
+																										
+																										
 																										<!-- QUESTION #10 -->
 																										<div class="question" data-wow-delay="0.0s">
 																											
@@ -1561,6 +1641,7 @@ BÔNUS INCRÍVEIS E SOB MEDIDA.
 																											</p>
 																											
 																										</div>	
+																										
 																										
 																									</div>
 																								</div>	<!-- END  QUESTIONS HOLDER -->
