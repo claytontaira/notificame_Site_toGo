@@ -10,12 +10,13 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 		<meta name="author" content="DSAThemes"/>	
-		<meta name="description" content="Notificame - Sistema de envio de mensagem para condomínios"/>
+		<meta name="description" content="Notificame - Sistema de envio de mensagem para condomínios. Instantânea ou Agendada podemos automatizar a comunicação interna do Condomínio."/>
 		<meta name="keywords" content="Notificame, Mensagem Condôminos, Mensagens, Comunicação, Comunicações, Condomínio, Moradores">	
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		
+	
 		<!-- SITE TITLE -->
-		<title>Notificame - Sistema de Mensagens Para Condôminos</title>
+		<title>Notificame - Sistema de Mensagens Para Condôminios</title>
 		
 		<!-- FAVICON AND TOUCH ICONS  -->
 		<!-- <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
@@ -45,7 +46,44 @@
 			<meta name="theme-color" content="#ffffff">
 			
 			
+			<!-- INICIO ABRIR PERGUNTAS FREQUENTES -->
+			<script type="text/javascript" src="js/jquery.min.js.download"></script>
 			
+			<script type="text/javascript">
+			  jQuery(function($) {
+				$( document ).ready(function() {
+					var urlParams = new URLSearchParams(window.location.search);
+
+					if (urlParams.has('cancelar')) {
+						document.getElementById('cat-04').scrollIntoView({behavior: 'instant', block: 'start',  inline: 'nearest'});
+						$('#cat-04-text').css('display','block');
+
+					}
+				});
+
+				$header = $(".navbar-default");
+				  $(document).on("scroll", function() {
+					var scrollToShowBackgroundMenu = $(".navbar-default").innerHeight();
+					var scrollToShowBackgroundMenu = 10;
+					if ($(window).scrollTop() > scrollToShowBackgroundMenu) {
+					  $header.addClass("menu-cor-hero");
+					} else {
+					  $header.removeClass("menu-cor-hero");
+					}
+				  });
+
+				$('.navbar-toggle').click(function(e) {
+					$header.toggleClass("menu-cor-hero");
+				});
+
+				// abas - abre e fecha
+				$('.js-faqopen dt').on('click', function(){
+					$(this).next('dd').slideToggle();
+				});
+
+			  });
+			</script>
+			<!-- END FECHAR PERGUNTAS FREQUENTES -->
 			
 			
 			<!-- GOOGLE FONTS -->
@@ -233,7 +271,7 @@
 						
 						
 						
-						
+					
 						<!-- HEADER
 							============================================= -->
 							<header id="header" class="header">
@@ -291,8 +329,8 @@
 													<!-- Dropdown Menu -->
 													<ul class="dropdown-menu" aria-labelledby="DropdownMenu">                          				
 														<!-- <li><a class="dropdown-item" href="#info-5">Why NextApp</a></li>                          				 -->
-														<li><a class="dropdown-item" href="https://app.notificame.com.br/login.html">Sou Condomínio</a></li> 
-														<li><a class="dropdown-item" href="https://app.notificame.com.br/contactlogin.html">Sou Morador</a></li>                               
+														<li><a class="dropdown-item" href="https://bit.ly/notificameloginadm" target="_blank">Sou Condomínio</a></li> 
+														<li><a class="dropdown-item" href="https://bit.ly/notificameloginuser" target="_blank">Sou Morador</a></li>                               
 														<!-- <li><a class="dropdown-item" href="#reviews-1">Testimonials</a></li> -->
 													</ul>
 												</li>
@@ -350,10 +388,11 @@
 																
 																<!-- Title -->
 																<!-- <h3 class="h3-xl">Manage all your personal finance</h3>	 -->
-																<h3 class="h3-xl">Síndico: Sua equipe pode trabalhar menos e produzir mais! Automatize 100% das suas Comunicação de rotina.</h3>	
+																<h3 class="h3-xl">Síndico: Sua equipe pode trabalhar menos e produzir mais! Automatize 100% das suas Comunicações de rotina.</h3>	
 																
 																<!-- Text -->
-																<p class="p-lg">Agende diversos avisos de manutenções de rotina (para o Zelador ou diretamente com o Prestador de Serviço) através de e-mail.<br>De forma instântanea, avise o Morador sobre avisos simples, como: encomendas, informar conquistas do condomínio, envie Enquetes para saber a opinião dos moradores, antes mesmo de colocar assuntos em pauta, etc.
+																<p class="p-lg"><strong>Somos uma plataforma de envio de mensagens de notificações.</strong><br>
+																<u><strong>Instantânea ou Agendada</strong></u> podemos automatizar a comunicação interna do Condomínio. Informações para os moradores, funcionários, conselho gestor, empresas de manutenções, informar conquistas do condomínio, enviar enquetes para saber a opinião dos moradores (antes mesmo de colocar assuntos em pauta) e muito mais. <u><strong>Assista o video</u></strong>. 👇👇👇
 																</p>
 
 																	<!-- Buttons -->
@@ -372,7 +411,7 @@
 															<div class="col-md-12 text-center">	
 																<!-- Video Preview -->
 																<div class="video-preview">						
-																	<a class="video-popup1" href="https://www.youtube.com/embed/SZEflIVnhH8">  <!-- Change the link HERE!!! -->	
+																	<a class="video-popup1" href="https://youtu.be/DDQ8YPh6fhQ">  <!-- Change the link HERE!!! -->	
 																		
 																		<!-- Play Icon --> 							
 																		<div class="video-btn play-icon-rose">	
@@ -475,11 +514,11 @@
 																			
 																			<!-- Text -->
 																			<p class="p-md"><strong>Simplificamos ao Máximo!</strong><br><br>
-																			1) Cadastro Mínimo, apenas: Nome do Condomínio, CNPJ e E-mail.<br>
+																			1) Cadastro Mínimo: Nome do Condomínio, CNPJ e E-mail.<br>
 																			2) Um e-mail será enviado para confirmar sua inscrição e cadastrar uma senha.<br>
 																			3) Na plataforma, cadastre um grupo (Exemplo: Nome da torre ou bloco), se for torre única, coloque um nome (Grupo de Moradores).<br>
 																			4) Cadastre os moradores associando ao grupo criado.<br>
-																			5) Na opção Enviar Comunicação, você já disparar mensagens.<br>
+																			5) Na opção <u><strong>Enviar Comunicação</strong></u>, você já pode disparar mensagens.<br>
 																			</p>
 																			
 																		</div>
@@ -544,7 +583,19 @@
 																	
 																	<!-- Title 	-->	
 																	<h3 class="h3-lg">Por que utilizar o Notificame?</h3>
-												
+
+																	<!-- Text -->
+																	<p class="p-md"><strong>Pensamos em várias estratégias para você!</strong><br><br>
+																	
+																	Com um tablet ou celular com conexão com a internet você poderá realizar o aviso de rotina. E importante, o funcionário não precisará dos dados do morador, somente o número do apartamento.
+																	<br><br>
+																	1) <strong><u>Para correspondência</u></strong>: Imagina com a chegada de novas encomendas o porteiro ou mensageiro do seu prédio precisa ficar interfonando para o apartamento querendo encontrar o morador, deixando-o sobrecarregado e com o interfone ocupado.<br>
+																	2) <strong><u>Para avisos agendados</u></strong>: A plataforma permite que o condomínio agende o envio de mensagens programadas, seja ela sobre manutenção preventiva ou avisos em grupos.<br>
+																	3) <strong><u>Para a realização de enquetes</u></strong>: Poderá enviar um link com enquetes para os moradores e saber se o assunto levantado é de relevância dos moradores.<br>
+																	4) <strong><u>Disponibilizaremos um e-book</u></strong> com diversas dicas para utilizar ao máximo nossa plataforma.<br>
+																	
+																	</p>
+																			
 																	</div>
 																</div>
 																
@@ -554,7 +605,7 @@
 																	
 																	<!-- FEATURE BOX #1 -->
 																	<div class="col-md-6 col-lg-4">
-																		<div class="fbox-2 wow fadeInUp" data-wow-delay="0.3s">
+																		<div class="fbox-2" data-wow-delay="0.0s">
 																			
 																			<!-- Icon  -->
 																			<img class="img-70" src="images/icons/graph.png" alt="feature-icon" />
@@ -577,7 +628,7 @@
 																	
 																	<!-- FEATURE BOX #4 -->
 																	<div class="col-md-6 col-lg-4">
-																		<div class="fbox-2 wow fadeInUp" data-wow-delay="0.3s">
+																		<div class="fbox-2" data-wow-delay="0.0s">
 																			
 																			<!-- Icon  -->
 																			<img class="img-70" src="images/icons/calendar-5.png" alt="feature-icon" />
@@ -600,7 +651,7 @@
 																	
 																	<!-- FEATURE BOX #6 -->
 																	<div class="col-md-6 col-lg-4">
-																		<div class="fbox-2 wow fadeInUp" data-wow-delay="0.7s">
+																		<div class="fbox-2" data-wow-delay="0.0s">
 																			
 																			<!-- Icon  -->
 																			<img class="img-70" src="images/icons/locked.png" alt="feature-icon" />
@@ -611,7 +662,7 @@
 																				<!-- Title -->
 																				<h5 class="h5-sm">Proteja seu cadastro:</h5>
 																				<!-- Text -->
-																				<p>Seu cadastro protegido dos funcionários e o Morador receberá mensagens apenas se autorizar.
+																				<p>Seu cadastro está protegido dos funcionários e o Morador receberá as mensagens, se autorizar.
 																				</p>
 																				
 																			</div>
@@ -690,7 +741,7 @@
 														
 														
 
-															
+
 															<!-- CHECKLIT
 															============================================= -->	
 					<section id="reviews-1" class="wide-100 bg-lightgrey reviews-section division">
@@ -698,17 +749,18 @@
 
 															<div class="element-container cf titulo-grande-dois" data-style="eyJhZHZhbmNlZENsYXNzIjoidGl0dWxvLWdyYW5kZS1kb2lzIiwiZXh0cmFzIjp7ImFuaW1hdGlvbkVmZmVjdCI6IiIsImFuaW1hdGlvbkRpcmVjdGlvbiI6bnVsbCwiYW5pbWF0aW9uRGVsYXkiOiIifX0=" id="le_body_row_16_col_1_el_1"><div class="element">
 															<h2 style="text-align:center;">Estratégias práticas para ajudar no dia a dia</h2><br><br></div></div>
+															
 															<div class="row one-column cf ui-sortable section espaco-cima-quatro espaco-baixo-quatro   " id="le_body_row_21">
 															
 															<div class="fixed-width"><div class="one-column column cols" id="le_body_row_21_col_1">
 															
-															<div class="element-container cf">
-															<div class="element">
-															<h2 style="text-align:center;">Iremos disponibilizar uma série de comunicação que fazem o Morador atuar de forma pró-ativa nas soluções de problemas.</h2><br><br></div></div>
+																<div class="element-container cf">
+																<div class="element">
+																<h2 style="text-align:center;">Iremos disponibilizar uma série de comunicação que fazem o Morador atuar de forma pró-ativa nas soluções dos problemas.</h2><br><br></div></div>
 															
-															<div class="element-container cf texto espaco-baixo-dois" id="le_body_row_21_col_1_el_3">
-															<div class="element">
-															</div></div>
+																<div class="element-container cf texto espaco-baixo-dois" id="le_body_row_21_col_1_el_3">
+																<div class="element">
+																</div></div>
 															
 															<div class="element-container cf beneficios03">
 															<div class="element">
@@ -717,37 +769,34 @@
 															Olá Carla chegou encomenda, favor retirar no horário 14h às 18h.<strong>
 															<br><br>OU</strong><br><br> 
 															Olá Carla acabamos de receber uma encomenda em seu nome.
-<br><br>
-Se puder vir receber ainda hoje ficaremos muito grato. 
-<br><br>
-Você sabia que recebemos em média 110 entregas por dia? Isso mesmo! E a média que que os moradores vêm retirar é de 1x na semana, você consegue imaginar como isso acumula na nossa pequena sala, muitas vezes, passo o dia inteiro interfonando para os moradores virem retirar e, pasmem, isso acontece após a terceira tentativa.
-<br><br>
-Posso contar com sua colaboração? Estamos abertos para retirada entre 14h às 18h (Seg. à Sex.). 
-<br>
-Sei que posso contar contigo, muito obrigado!
-<br><br><strong>
-Agora uma pergunta? Qual comunicação faz o morador sentir parte da solução. 
-<br><br>
-Qual faz ele jogar a seu favor? Acho que o segundo né? 
-</strong></p>
-															
+															<br><br>
+															Se puder vir receber ainda hoje ficaremos muito grato.
+															<br><br>
+															Você sabia que recebemos em média 110 entregas por dia? Isso mesmo! E a média que que os moradores vêm retirar é de 1x na semana, você consegue imaginar como isso acumula na nossa pequena sala, muitas vezes, passo o dia inteiro interfonando para os moradores virem retirar e, pasmem, isso acontece após a terceira tentativa.
+															<br><br>
+															Posso contar com sua colaboração? Estamos abertos para retirada entre 14h às 18h (Seg. à Sex.).
+															<br>
+															Sei que posso contar contigo, muito obrigado!
+															<br><br><strong>
+															Agora uma pergunta? Qual comunicação faz o morador sentir parte da solução.
+															<br><br>
+															Qual faz ele jogar a seu favor? Acho que o segundo né?
+															</strong>
+															</p>											
 															<p><strong>SOBRE ENQUETES: ENVIE ENQUETES ONLINE E SAIBA A OPINIÃO DOS MORADORES ANTES DE VIRAR PAUTA DE REUNIÃO <U>OU</U> AJUDAR O SÍNDICO A AVALIAR PRIORIDADES PARA A GESTÃO</strong><br><br>
 															Você gostaria de uma feirinha no condomínio?<br><br>
-As feirinhas estão em alta nos condomínios! O que acha de perguntar aos moradores do seu condomínio sobre criarem uma feirinha uma vez por semana?<br><br>
-Responda a enquete no link, queremos saber sua opinião. <u>Clique aqui.</u><br><br>
-
-<strong>Esse tipo de ação é muito boa também para gerar uma interação maior entre os moradores.<br>
-As enquetes são muito úteis e objetivas! </strong>
+															As feirinhas estão em alta nos condomínios! O que acha de perguntar aos moradores do seu condomínio sobre criarem uma feirinha uma vez por semana?<br><br>
+															Responda a enquete no link, queremos saber sua opinião. <u>Clique aqui.</u><br><br>
+															<strong>Esse tipo de ação é muito boa também para gerar uma interação maior entre os moradores.<br>
+															As enquetes são muito úteis e objetivas! </strong>
 															</p>
 															<p><strong>SOBRE PARALISAÇÃO DE ALGUM SERVIÇO PRESTADO: AVISAR OS MORADORES SOBRE A INTERRUPÇÃO NO FORNECIMENTO DE ALGUM SERVIÇO</strong><br><br>
-Ser pego de surpresa sem o fornecimento de, por exemplo, água no apartamento, elevador parou, etc. <br><br>
-É uma das causas que podem gerar transtornos e insatisfação por parte do morador, pois ele está desprevenido, acontece que imprevistos acontecem.<br><br>
-O fato do morador não ter ciência do que ocorre ele corre para as redes sociais e despeja sua insatisfação. O que o morador desconhece, é o fato do problema já estar sendo tratado da melhor maneira possível e isso gera um certo desgate para os funcionários/zelador/síndico que está ali para ajudar.
-<br><br><strong>
-Agora uma pergunta? Se um aviso chegar o quanto antes sobre a tal paralisação, podemos evitar o despejo de indignação nas redes?
-<br><br>
-Se podemos evitar esse tipo de conduta, por quê não avisá-lo? 
-</strong>
+															Ser pego de surpresa sem o fornecimento de, por exemplo, água no apartamento, elevador parou, etc. <br><br>
+															É uma das causas que podem gerar transtornos e insatisfação por parte do morador, pois ele está desprevenido, acontece que imprevistos acontecem.<br><br>
+															O fato do morador não ter ciência do que ocorre ele corre para as redes sociais e despeja sua insatisfação. O que o morador desconhece, é o fato do problema já estar sendo tratado da melhor maneira possível e isso gera um certo desgate para os funcionários/zelador/síndico que está ali para ajudar.<br><br><strong>
+															Agora uma pergunta? Se um aviso chegar o quanto antes sobre a tal paralisação, podemos evitar o despejo de indignação nas redes?<br><br>
+															Se podemos evitar esse tipo de conduta, por quê não avisá-lo? 
+															</strong>
 															</p>
 															</div></div></div></div></div></div>
 
@@ -756,6 +805,59 @@ Se podemos evitar esse tipo de conduta, por quê não avisá-lo?
 															</section>
 															<!-- END CHECKLIT-1 -->
 															
+
+															<!-- DOWNLOAD
+															============================================= -->
+
+															<BR><BR>
+															
+															<section id="process-3">
+															
+															<div class="col-lg-10 offset-lg-1 section-title">
+																<!-- Title 	-->	
+																<h3 class="h3-lg">Download</h3>	
+																<!-- Text -->
+																<p class="p-md">Baixe nossos ebooks gratuitos que poderiam facilmente ser vendidos. Sim, não estou exagerando. Estes E-books tem tanta qualidade que facilmente poderia vende-los. Mas serão seus gratuitamente, basta clicar em Download Grátis e realizar o download.
+																</p>
+															</div>
+															<div class="container">
+															
+															<div class="row">
+																	<!-- FEATURE BOX #1 -->
+																	<div align="center" class="col-md-6 col-lg-4">
+																			<!-- Icon  -->
+																			<img width="80%" height="80%" src=images/ebook/ebook-Manutencao-preventiva-condominio_2.png /><br><br>
+																			<strong>E-book com mensagens de comunição altamente eficazes</strong>
+																			<br><br>
+																			<a href="#info-12" class="btn btn-tra-grey black-hover">AGUARDEM!</a><br><br>
+																	</div>
+																	
+																	<!-- FEATURE BOX #1 -->
+																	<div align="center" class="col-md-6 col-lg-4">
+																			<!-- Icon  -->
+																			<img width="80%" height="80%" src=images/ebook/ebook-Manutencao-preventiva-condominio_2.png /><br><br>
+																			<strong>E-book com checklist de manutenção preventiva em Condomínios</strong>
+																			<br><br>
+																			<a href="#info-12" class="btn btn-tra-grey black-hover">AGUARDEM!</a><br><br>
+																	</div>
+																	
+																	<!-- FEATURE BOX #1 -->
+																	<div align="center" class="col-md-6 col-lg-4">
+																			<!-- Icon  -->
+																			<img width="80%" height="80%" src=images/ebook/ebook-Manutencao-preventiva-condominio_2.png />
+																			<br><br>
+																			<strong>E-book para criar enquetes de maneira simples e gratuita</strong>
+																			<br><br>
+																			<a href="#info-12" class="btn btn-tra-grey black-hover">AGUARDEM!</a><br><br>
+																	</div>
+																	
+															</div>
+															</div>
+															</section>
+															<!-- END DOWNLOAD
+															============================================= -->
+															
+															<br><br><br><br>
 															<!-- TELAS DO SISTEMA
 															============================================= -->
 
@@ -778,6 +880,7 @@ Se podemos evitar esse tipo de conduta, por quê não avisá-lo?
 																	</div>
 																	<div class="row">
 																		<div class="owl-carousel owl-theme owl-loaded owl-drag client-testimonial dot-indicator">
+															
 																			<div class="item">
 																				<div class="testimonial-wrap">
 																					<div class="media author-info">
@@ -1117,7 +1220,8 @@ Se podemos evitar esse tipo de conduta, por quê não avisá-lo?
 																						</div>
 																					</div>      
 																				</div>	   
-																			</div>	-->
+																			</div>	
+																			-->
 																			<!-- END MEDIA-2 -->
 																			
 																			
@@ -1161,14 +1265,16 @@ BÔNUS INCRÍVEIS E SOB MEDIDA.
 																																																																				<div class="element">
 																																																																					<div class="op-text-block" style="width:100%;text-align: left;">
 																										<p>BÔNUS ESPECIAL 01: Participe do Grupo VIP de Síndicos</p>
-																										<p>BÔNUS ESPECIAL 02: E-book com mensagens de comunição altamente eficazes</p>
-																										<p>BÔNUS ESPECIAL 03: E-book com checklist de manutenção preventiva em Condomínios</p>
-																										<p>BÔNUS ESPECIAL 04: E-book para criar enquetes de maneira simples e gratuita</p>
-																										<p>BÔNUS ESPECIAL 05: Comissão de até 350,00 por cliente indicado</p>
+																										<p>BÔNUS ESPECIAL 02: Comissão de até 300,00 por cliente indicado</p>
 																									</div></div></div>
 																									<br><br>
 																																																																		</div></div>
 																			<!-- BONUS-->
+
+
+
+
+
 																		
 																			<!-- GARANTIA
 																			============================================= -->
@@ -1259,7 +1365,7 @@ BÔNUS INCRÍVEIS E SOB MEDIDA.
 																									</ul>
 																									
 																									<!-- Button -->
-																									<a href="https://app.notificame.com.br/cadadmin.html" class="btn btn-sm btn-tra-white black-hover">30 Dias Grátis</a>
+																									<a href="https://bit.ly/CadAdmin30diasGratis" target="_blank" class="btn btn-sm btn-tra-white black-hover">30 Dias Grátis</a>
 																									
 																								</div>
 																							</div>	<!-- END STARTER PRICE PLAN -->
@@ -1293,7 +1399,7 @@ BÔNUS INCRÍVEIS E SOB MEDIDA.
 																									</ul>
 																									
 																									<!-- Button -->
-																									<a href="https://app.notificame.com.br/cadadmin.html" class="btn btn-sm btn-green black-hover">30 dias Grátis</a>
+																									<a href="https://bit.ly/CadAdmin30diasGratis" target="_blank" class="btn btn-sm btn-green black-hover">30 dias Grátis</a>
 																									
 																								</div>					
 																							</div>	<!--END BASIC PRICE PLAN -->
@@ -1327,7 +1433,7 @@ BÔNUS INCRÍVEIS E SOB MEDIDA.
 																									</ul>
 																									
 																									<!-- Button -->
-																									<a href="https://app.notificame.com.br/cadadmin.html" class="btn btn-sm btn-tra-white black-hover">30 Dias Grátis</a>
+																									<a href="https://bit.ly/CadAdmin30diasGratis" target="_blank" class="btn btn-sm btn-tra-white black-hover">30 Dias Grátis</a>
 																									
 																								</div>
 																							</div>	<!-- END PREMIUM PRICE PLAN -->
@@ -1382,83 +1488,101 @@ BÔNUS INCRÍVEIS E SOB MEDIDA.
 																								<div class="col-lg-6">
 																									<div class="questions-holder">
 																										
-																										
 																										<!-- QUESTION #1 -->
-																										<div class="question wow fadeInUp" data-wow-delay="0.3s">
+																										<div class="question" data-wow-delay="0.0s">
 																											
 																											<!-- Question -->
-																											<h5 class="h5-xs">Para quem é o notificame?</h5>
+																											<h5 class="h5-xs">Como funciona a avaliação gratuita por 30 dias?</h5>
 																											
 																											<!-- Answer -->
-																											<p>A notificame é para pessoas que desejam ser avisadas rapidamente
-																												sobre qualquer recebimento, seja uma correspondência ou encomenda. A plataforma também é
-																												destinada por aqueles que precisam avisar rapidamente ao usuário sobre qualquer entrega. 	
+																											<p>Nós oferecemos <strong><u>30 dias gratuitos</strong></u> para você convidar sua equipe e <strong><u>testar todos os recursos</strong></u>.
+																											</p>
+																											
+																										</div>	
+
+																										<!-- QUESTION #1 -->
+																										<div class="question" data-wow-delay="0.0s">																										
+																											<!-- Question -->
+																											<h5 class="h5-xs">Preciso informar um cartão de crédito para o período de testes?</h5>
+																											
+																											<!-- Answer -->
+																											<p><u><strong>Não!</u></strong> Fique tranquilo, <u><strong>não é necessário cartão crédito</u></strong> e nós avisaremos quando o teste estiver terminando.<br>
+																											Finalizado, ou não, o período de teste, a assinatura pode ser feita diretamente pelo sistema e será somado o período de teste pelo plano contratado.
 																											</p>
 																											
 																										</div>	
 																										
 																										<!-- QUESTION #2 -->					
-																										<div class="question wow fadeInUp" data-wow-delay="0.5s">
+																										<div class="question" data-wow-delay="0.0s">
 																											
 																											<!-- Question -->
-																											<h5 class="h5-xs">Porque utilizar o notificame?</h5>
+																											<h5 class="h5-xs">Quais informações preciso para realizar o cadastro do condomínio?</h5>
 																											
 																											<!-- Answer -->
-																											<p> Você receberá de forma segura, eficiente e automatizada sobre
-																												qualquer recebimento. Imagine que você aguarda a chegada de alguma encomenda importante,
-																												você passa a maior parte do tempo fora do seu apartamento e única forma que encontram para te
-																												avisar sobre isso é interfonando para sua unidade, da qual você nunca está. Com a notificame seu
-																												condomínio poderá automatizar esse aviso para que você saiba da entrega de forma impessoal.
+																											<p>Cadastro mínimo com <u><strong>Nome, E-mail e Cnpj</u></strong>. Será enviado um e-mail para confirmar a inscrição, cadastrar senha e receber o link de acesso.
+																											Após o período de teste, pedimos que conclua o cadastro para conhecermos melhor nossos clientes.
 																											</p>
 																											
 																										</div>
 																										
-																										
 																										<!-- QUESTION #3 -->
-																										<div class="question wow fadeInUp" data-wow-delay="0.7s">
+																										<div class="question" data-wow-delay="0.0s">
 																											
 																											<!-- Question -->
-																											<h5 class="h5-xs">Como o aviso é feito de forma impessoal?</h5>
+																											<h5 class="h5-xs">Preciso cadastrar manualmente todos os moradores?</h5>
 																											
 																											<!-- Answer -->
-																											<p>Basta fornecer o e-mail e um código de localização para
-																												ser endereçado o aviso, por exemplo: O morador do apartamento 20 do bloco A, basta fornecer o
-																												e-mail, bloco e apartamento para registro do seu condomínio que ele será avisado, dessa forma
-																												você protege seus dados, o fornecimento de nome, telefone e demais são de critério opcional. 
+																											<p><u><strong>Não!</strong></u> Temos uma tela de importação de cadastro, basta seguir o modelo padrão (<strong><u>clique aqui para baixar</strong></u>) e realizar a importação dos cadastros sem precisar cadastrar um a um. <br>
+																											<p><u><strong>Recomendamos</strong></u> que importe por grupos, por exemplo: Moradores do Bloco A, pois no momento de importar os cadastros um grupo deverá ser informado. 
 																											</p>									
 																											
 																										</div>	
 																										
 																										
+																			
+																										
 																										<!-- QUESTION #4 -->
-																										<div class="question wow fadeInUp" data-wow-delay="0.9s">
+																										<div class="question" data-wow-delay="0.0s">
 																											
 																											<!-- Question -->
-																											<h5 class="h5-xs">Como posso utilizar a plataforma?</h5>
+																											<h5 class="h5-xs">O Morador deve aprovar o envio da comunicação?</h5>
 																											
 																											<!-- Answer -->
-																											<p>Nossa plataforma funciona como uma central de aviso de
-																												recebimento, basta que seu síndico ou comunicar te cadastre no sistema para que você seja
-																												avisado dos recebimentos.
+																											<p><strong><u>Sim</strong></u>, mas isso é de forma automática! Todos os moradores cadastrados receberão um e-mail de cadastro na plataforma. <br><br>
+																											Este e-mail tem o botão de APROVAR NOTIFICAÇÃO e, a partir deste momento, a plataforma estará apta a realizar a comunicação. A cada notificação recebida o morador pode desabilitar o recebimento a qualquer momento.
 																											</p>
 																											
 																										</div>
 																										
 																										<!-- QUESTION #5 -->
-																										<div class="question wow fadeInUp" data-wow-delay="0.9s">
+																										<div class="question" data-wow-delay="0.0s">
 																											
 																											<!-- Question -->
-																											<h5 class="h5-xs">Qual a diferença do notificame para um aplicativo de mensagem?</h5>
+																											<h5 class="h5-xs">Como o cadastro dos moradores estão protegidos?</h5>
 																											
 																											<!-- Answer -->
-																											<p>A notificame é uma plataforma
-																												de envio de recebimentos através de notificações, não é necessário o fornecimento de seu telefone
-																												para outros, além disso agiliza a forma de avisos de recebimento para o comunicador.
+																											<p>Ao contrário do síndico que possui acesso à todas as informações. O porteiro, receberá o perfil de <u>operador</u>. <br>
+																											Este perfil possibilita o sistema esconder as informações pessoais dos moradores.<br>
+																											Pelo celular/tablet o operador escolherá a mensagem, grupo/bloco e número do apartamento. Pressionando enviar, o sistema enviará a mensagem para os moradores daquele apartamento, <u>sem ter acesso aos dados pessoais dos moradores</u>.
+
 																											</p>
 																											
 																										</div>
 																										
+																										<!-- QUESTION #6 -->
+																										<div class="question" data-wow-delay="0.0s">
+																											
+																											<!-- Question -->
+																											<h5 class="h5-xs">Por que não enviamos via WhatsApp?</h5>
+																											
+																											<!-- Answer -->
+																											<p>Atualmente o WhatsApp liberou mensagens em massa para empresas, com o custo em torno de R$0,50 por notificação (o que daria R$ 500,00 em 1 mil notificações só de custo), o que o tornou viável apenas para canais de vendas. <br>
+																											O WhatsApp tradicional possui uma limitação de contatos e mensagens enviadas, o que inviabiliza sua implementação.
+																											</p>
+																											
+																										</div>
 																										
+																									
 																										
 																									</div>
 																								</div>	<!-- END QUESTIONS HOLDER -->
@@ -1467,76 +1591,108 @@ BÔNUS INCRÍVEIS E SOB MEDIDA.
 																								<!-- QUESTIONS HOLDER -->
 																								<div class="col-lg-6">
 																									<div class="questions-holder ind-30">
-																										
-																										
-																										
-																										
+
 																										
 																										<!-- QUESTION #6 -->					
-																										<div class="question wow fadeInUp" data-wow-delay="0.5s">
+																										<div class="question" data-wow-delay="0.0s">
 																											
 																											<!-- Question -->
-																											<h5 class="h5-xs">Como funciona a plataforma de envio notificame?</h5>
+																											<h5 class="h5-xs">Posso cancelar o plano contratado?</h5>
 																											
 																											<!-- Answer -->
-																											<p>Após adquirir um dos planos disponiveis na
-																												nossa plataforma o comunicador (síndico) cadastra no sistema um meio de comunicação com
-																												você, (e-mail) conectado a identificação de seu apartamento, com opção para complemento, após
-																												o cadastro no sistema qualquer recebimento endereçado a você será enviada uma notificação por
-																												e-mail ou pelo nosso app. 
+																											<p><strong><u>Sim!</strong></u> A qualquer momento poderá cancelar o plano contratado, basta enviar um e-mail para <strong><u><a href="mailto:contato@notificame.com.br">contato@notificame.com.br</a></strong></u> com o assunto “Quero cancelar”, esse e-mail deverá ser do e-mail contratado. Retemos 20% dos meses restantes do contrato para pagarmos os custos de infraestrutura dimensionada. 
 																											</p>
 																											
 																										</div>
 																										
 																										
 																										<!-- QUESTION #6 -->
-																										<div class="question wow fadeInUp" data-wow-delay="0.7s">
+																										<div class="question" data-wow-delay="0.0s">
 																											
 																											<!-- Question -->
-																											<h5 class="h5-xs">Quais dados são necessários fornecer para receber os avisos?</h5>
+																											<h5 class="h5-xs">Existe algum material informativo para avisar os moradores?</h5>
 																											
 																											<!-- Answer -->
-																											<p> Para receber notificações de
-																												entregas do seu comunicador você deverá fornecer apenas seu e-mail, apartamento com bloco ou
-																												torre se houverem complementos. Demais dados são opcionais. 
+																											<p><strong><u>Sim!</strong></u> Está disponível dois modelos de comunicação (<strong><u>clique aqui para baixar</strong></u>), uma para o quadro de avisos em formato A4 e outra para cada apartamento em formato menor.<br>
+																											<strong><u>Recomendamos</strong></u> que seja distribuído com no mínimo 1 semana antes de iniciar a importação do cadastro, pois a importação enviará um e-mail para cada morador aprovar o envio. 
+
 																											</p>
 																											
 																										</div>
 																										
 																										
 																										<!-- QUESTION #7 -->
-																										<div class="question wow fadeInUp" data-wow-delay="0.9s">
+																										<div class="question" data-wow-delay="0.0s">
 																											
 																											<!-- Question -->
-																											<h5 class="h5-xs">Posso me cadastrar no sistema para envio de mensagens?</h5>
+																											<h5 class="h5-xs">O que fazer se o morador não receber o e-mail de comunicação?</h5>
 																											
 																											<!-- Answer -->
-																											<p>Para receber notificações de entregas
-																												seu comunicador deverá te cadastrar no sistema
+																											<p>Pedimos que verifiquem a <strong><u>pasta de lixo eletrônico (spam)</strong></u>.<br>
+																											Uma vez que o morador indique que o remetente é confiável, todas as outras mensagens serão direcionadas para caixa de entrada. Esta recomendação estará no material de comunicação.
 																											</p>
 																											
 																										</div>	
 																										<!-- QUESTION #8 -->
-																										<div class="question wow fadeInUp" data-wow-delay="0.9s">
+																										<div class="question" data-wow-delay="0.0s">
 																											
 																											<!-- Question -->
-																											<h5 class="h5-xs">Como são recebidas as notificações?</h5>
+																											<h5 class="h5-xs">Quais informações são necessárias para iniciar o cadastro dos moradores?</h5>
 																											
 																											<!-- Answer -->
-																											<p>Você recebe as notificações de entrega pelo seu e-mail, ou
-																												se preferir pelo nosso app, para essa opção o login será também por e-mail, com opções para se
-																												cadastrar no sistema ou entrar pelas redes sociais.
+																											<p>Simplificamos para <i>Nome, E-mail e Apartamento</i>.<br>
+																											Caso queira enriquecer o cadastro (recomendamos): <i>Apelido (como gostaria que fosse chamado), Celular, Data de Nascimento e Sexo</i>.
 																											</p>
 																											
 																										</div>	
 																										<!-- QUESTION #9 -->
-																										<div class="question wow fadeInUp" data-wow-delay="0.9s">
+																										<div class="question" data-wow-delay="0.0s">
 																											
 																											<!-- Question -->
-																											<h5 class="h5-xs">Existe o uso de aplicativos para esse sistema?</h5>
+																											<h5 class="h5-xs">Posso utilizar a comunicação para outras pessoas que não são moradores?</h5>
 																											
 																											<!-- Answer -->
-																											<p>Sim, estão disponíveis para sistema Android e IOS.
+																											<p><strong><u>Sim!</strong></u> <i>Existem dois tipos de grupos: Grupo de Moradores e Grupo de Trabalho</i>. <u>Associando ao Grupo de Trabalho</u>, não será necessário informar o apartamento.<br> 
+																											<strong><u>Exemplo de Grupo</strong></u>: Portaria, Segurança, Jardinagem, Manutenção do Elevador, Conselho Gestor, etc. Esses tipos de grupos são úteis para mensagens agendadas que não podem ser esquecidas tais obrigações/tarefas.
+																											</p>
+																											
+																										</div>	
+																										
+																										<!-- QUESTION #6 -->
+																										<div class="question" data-wow-delay="0.0s">
+																											
+																											<!-- Question -->
+																											<h5 class="h5-xs">Quais são as formas de pagamento?</h5>
+																											
+																											<!-- Answer -->
+																											<p>Aceitamos boleto e diversos cartões de crédito. Sugerimos a assinatura no cartão de crédito, porque a conta é liberada instantaneamente com o pagamento. No boleto, pode levar até 3 dias úteis para que o pagamento seja compensado e a conta liberada.
+																											</p>
+																											
+																										</div>
+																										
+																										
+																										<!-- QUESTION #6 -->
+																										<div class="question" data-wow-delay="0.0s">
+																											
+																											<!-- Question -->
+																											<h5 class="h5-xs">Posso alterar de plano ou contratar um plano customizado?</h5>
+																											
+																											<!-- Answer -->
+																											<p><strong><u>Sim</strong></u>! Envie um e-mail para <strong><u><a href="mailto:contato@notificame.com.br">contato@notificame.com.br</a></strong></u> para entendermos sua necessidade. 
+																											</p>
+																											
+																										</div>
+																										
+																										
+																										<!-- QUESTION #10 -->
+																										<div class="question" data-wow-delay="0.0s">
+																											
+																											<!-- Question -->
+																											<h5 class="h5-xs">Como funciona o programa de indicação?</h5>
+																											
+																											<!-- Answer -->
+																											<p>Basta pedir ao cliente enviar um e-mail para <strong><u><a href="mailto:contato@notificame.com.br">contato@notificame.com.br</a></strong></u> informando sobre a indicação.<br>
+																											Indicação válida somente para clientes novos com contratos ativos, pagamento mensalmente de 30% do valor da mensalidade, deverá ser informado no primeiro mês de uso, não é válida para renovação.
 																											</p>
 																											
 																										</div>	
