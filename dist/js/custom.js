@@ -153,7 +153,7 @@
 						youtube: {
 			   
 							index: 'youtube.com',
-							src: 'https://www.youtube.com/embed/SZEflIVnhH8'
+							src: 'https://www.youtube.com/embed/DDQ8YPh6fhQ'
 				
 								}
 							}
